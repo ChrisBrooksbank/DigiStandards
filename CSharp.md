@@ -6,6 +6,8 @@
 * No magic strings, e.g. always use a DateTime extension method to format a date
 * No spaces immeditely before or after brackets
 * Inject services into Controller constructors 
+* All methods should be easy to understand by other coders
+	* Can improve readability by extracting code, e.g. switch statements, into private methods
 * DRY ( dont repeat yourself )
 	* custom Attributes
 	* meta data
@@ -18,3 +20,6 @@
 * When a partial needs its own Model, use @Html.Action()
 	* Decorate the action with [ChildActionOnly] assuming you dont want to be able to hit endpoint by hitting its URL
 	* This action can return Partial e.g.  return PartialView("_Navigation", model);
+
+
+	
