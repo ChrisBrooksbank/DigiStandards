@@ -29,3 +29,20 @@ e.g. :
                 float: right;
                 margin-top: 3px;
 ```
+
+## Main.scss
+
+The ‘Main.scss’ file is the ‘master  file’ so to speak, and contains all references to ‘child’ files. These files are imported by using the @import statement like so:
+
+```scss
+@import 'site/chosen';
+@import 'site/select';
+@import 'site/constants';
+```
+
+To add a new file, create a new one in the ‘site’ directory and then import them referencing them as above. Really anything like a header, Modal, footer or any logical grouping or component should be stored in a separate Sass file. This makes it easier to find and maintain pertaining style rules. A good rule of thumb is you find yourself splitting a section of Sass with a comment, then it should really be stored in a separate Sass file. 
+
+
+
+
+

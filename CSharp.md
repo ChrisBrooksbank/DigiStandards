@@ -3,6 +3,7 @@
 ## CheckList
 * Ensure there are no unneeded using clauses ( grey )
 * Always define variables as type var
+* Ensure there are no Resharper hints to look at
 * No magic strings, e.g. always use a DateTime extension method to format a date
 * No spaces immeditely before or after brackets
 * Inject services into Controller constructors 
@@ -13,6 +14,8 @@
 	* meta data
 	* partial views
 * Inject service classes into controller constructors using structuremap
+* Ensure that any LINQ resolves to SQL i.e. that it does not generate in memory processing
+* 
 
 ## Other
 * Define new Attribute descendants where appropiate e.g. to encode data relating to a enumeration value
@@ -22,4 +25,5 @@
 	* This action can return Partial e.g.  return PartialView("_Navigation", model);
 
 
-	
+## Mappers
+
