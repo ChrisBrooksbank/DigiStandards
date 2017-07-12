@@ -10,3 +10,4 @@
 	* e.g. dont use standard checkboxes use bootstrap toggle buttons e.g. yes-no-selector Angular directive
 * Consistent use of fonts
 * Consistent use of colour
+* Users shouldnt have to scroll
