@@ -28,3 +28,18 @@ $(document).ready(function () {
     GEO.Navigation.init();
 });
 ```
+
+
+JQuery objects names to be prefixed with $, so reader knows they have JQuery functions available
+
+To ensure text in HTML is encoded correctly, use the text property
+
+e.g.
+```javascript
+var $memberColumn = $("<td/>").text(memberNameToAdd);
+var $memberIdColumn = $("<td/>").text(memberIdToAdd);
+var $newRow = $("<tr/>").append($memberColumn).append($memberIdColumn);
+
+ $('table.photobookmembers tr:last').after($newRow);
+```
+

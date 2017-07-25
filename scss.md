@@ -13,6 +13,7 @@
 * If a element is being truncated, check its display is set to block rather than inline
 * Remember selectors such as : first-of-type, nth-Child
 * Buttons style differently. To make a really wide button display: block; doesnt work, width: 100% should
+* BrowserStack is the best way to verify the site runs OK on actual devices. e.g. Safari on a IPhone and Chrome on a Nexus 6.
 
 ## Mobile First
 The styling for mobile phones should be at the top of the file, with no media query.
@@ -29,6 +30,8 @@ e.g. :
                 float: right;
                 margin-top: 3px;
 ```
+
+Its preferrable to put media querys at end of file and replicate required selectors, rather than embedding media querys in existing SCSS selectors.
 
 ## Main.scss
 

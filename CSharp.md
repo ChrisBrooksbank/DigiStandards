@@ -15,7 +15,20 @@
 	* partial views
 * Inject service classes into controller constructors using structuremap
 * Ensure that any LINQ resolves to SQL i.e. that it does not generate in memory processing
-* 
+
+* XDocument.Load is banned. Use (LordsBiz) IWebClientService. This is much more robust ( e.g. three retrys, use of a TimedWebClient which includes a timeout ) 
+
+```c#
+public interface IWebClientService
+{
+    XDocument GetXmlWebResponse(string url);
+    string GetJsonStringWebResponse(string url);
+    Task<string> GetJsonStringWebResponseAsync(string url);
+    T GetJsonWebResponse<T>(string url) where T : new();
+}
+```
+
+* Place Form around markup even if you want to handle in JavaScript. It means Enter in a control will cause the action to fire.
 
 ## Other
 * Define new Attribute descendants where appropiate e.g. to encode data relating to a enumeration value
