@@ -6,6 +6,8 @@
 * Ensure there are no Resharper hints to look at
 * No magic strings, e.g. always use a DateTime extension method to format a date
 * No spaces immeditely before or after brackets
+* Minimise nesting e.g. of if statements, consider inverting if's
+* Method implementations should be short and easy to understand, if not consider extracting methods.
 * Inject services into Controller constructors 
 * All methods should be easy to understand by other coders
 	* Can improve readability by extracting code, e.g. switch statements, into private methods
@@ -15,6 +17,7 @@
 	* partial views
 * Inject service classes into controller constructors using structuremap
 * Ensure that any LINQ resolves to SQL i.e. that it does not generate in memory processing
+* IQueryable within service layer, IEnumerable returned from service layer ( not IQueryable )
 
 * XDocument.Load is banned. Use (LordsBiz) IWebClientService. This is much more robust ( e.g. three retrys, use of a TimedWebClient which includes a timeout ) 
 
@@ -39,7 +42,6 @@ public interface IWebClientService
 * When a partial needs its own Model, use @Html.Action()
 	* Decorate the action with [ChildActionOnly] assuming you dont want to be able to hit endpoint by hitting its URL
 	* This action can return Partial e.g.  return PartialView("_Navigation", model);
-
 
 ## Mappers
 
