@@ -4,6 +4,7 @@
 * Ensure there are no unneeded using clauses ( grey )
 * Always define variables as type var
 * Ensure there are no Resharper hints to look at
+* Always run unit tests before a push and even more so before a merge request
 * No magic strings, e.g. always use a DateTime extension method to format a date
 * No spaces immeditely before or after brackets
 * Minimise nesting e.g. of if statements, consider inverting if's
