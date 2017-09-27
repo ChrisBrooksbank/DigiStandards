@@ -36,6 +36,8 @@ public interface IWebClientService
 
 * Services should return IEnumerable NOT IQueryable
 * Within services, IQueryables should be used, inefficient SQL is generated even if you pass in a param which is a IQueryable, if the recieving function defines it as a IEnumerable. It must be defined as IQueryable to get efficent SQL.
+* Verify code is case-insensitive ( assuming thats required )
+* Check behaviour if URL param is misnamed
 
 ## Other
 * Define new Attribute descendants where appropiate e.g. to encode data relating to a enumeration value
@@ -44,5 +46,9 @@ public interface IWebClientService
 	* Decorate the action with [ChildActionOnly] assuming you dont want to be able to hit endpoint by hitting its URL
 	* This action can return Partial e.g.  return PartialView("_Navigation", model);
 
+* If a Controller method has a LOT of parameters, especially if used elsewhere, wrap inside a new class ( put in Model folder, but dont call it a viewmodel, e.g. call it a ParameterModel )
+* Ensure FavIcon
+
 ## Mappers
+* Inject these via interfaces, see EQM
 

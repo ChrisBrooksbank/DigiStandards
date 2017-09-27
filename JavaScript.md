@@ -43,3 +43,4 @@ var $newRow = $("<tr/>").append($memberColumn).append($memberIdColumn);
  $('table.photobookmembers tr:last').after($newRow);
 ```
 
+When writing a JS function, ensure it could be used if multiple of same component are on page, parametise as needed
